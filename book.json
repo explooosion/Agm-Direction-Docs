@@ -4,7 +4,6 @@
     "language": "en",
     "plugins": [
         "github",
-        "editlink",
         "prism",
         "-highlight",
         "splitter",
@@ -13,10 +12,6 @@
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/explooosion/Agm-Direction-Docs"
-        },
-        "editlink": {
-            "base": "https://github.com/explooosion/Agm-Direction-Docs/master",
-            "label": "EDIT"
         },
         "sitemap": {
             "hostname": "https://github.com/explooosion/Agm-Direction-Docs"
