@@ -1,0 +1,68 @@
+/**
+Color: Semantic-UI https://semantic-ui.com/usage/theming.html#sitewide-defaults
+Usage: <div class="note note-red">TEXT<div>
+*/
+
+.note {
+    display: block;
+    margin: 16px 0;
+    padding: 8px;
+    max-width: 100%;
+    font-size: 14px;
+    color: #ececec;
+    background: #555;
+    border-left: #555 8px solid;
+    box-sizing: border-box;
+}
+
+.note-red {
+    border-color: #B03060;
+}
+
+.note-orange {
+    border-color: #FE9A76;
+}
+
+.note-yellow {
+    border-color: #FFD700;
+}
+
+.note-olive {
+    border-color: #32CD32;
+}
+
+.note-green {
+    border-color: #016936;
+}
+
+.note-teal {
+    border-color: #008080;
+}
+
+.note-blue {
+    border-color: #0E6EB8;
+}
+
+.note-violet {
+    border-color: #EE82EE;
+}
+
+.note-purple {
+    border-color: #B413EC;
+}
+
+.note-pink {
+    border-color: #FF1493;
+}
+
+.note-brown {
+    border-color: #A52A2A;
+}
+
+.note-grey {
+    border-color: #A0A0A0;
+}
+
+.note-black {
+    border-color: #000000;
+}

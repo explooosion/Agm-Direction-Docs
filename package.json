@@ -1,0 +1,27 @@
+{
+  "name": "agm-direction-docs",
+  "version": "0.0.1",
+  "description": "document for agm-direction",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gitbook serve --port 8080",
+    "build": "gitbook build . ./docs",
+    "pdf": "gitbook pdf . Agm-Direction-Docs.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/explooosion/Agm-Direction-Docs.git"
+  },
+  "keywords": [
+    "agm",
+    "agm-direction",
+    "docs"
+  ],
+  "author": "Robby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/explooosion/Agm-Direction-Docs/issues"
+  },
+  "homepage": "https://github.com/explooosion/Agm-Direction-Docs#readme",
+  "dependencies": {}
+}

@@ -1,0 +1,40 @@
+{
+    "title": "Agm-Direction-Docs",
+    "description": "Document for Agm-Direction",
+    "language": "en",
+    "plugins": [
+        "github",
+        "editlink",
+        "prism",
+        "-highlight",
+        "splitter",
+        "sitemap"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/explooosion/Agm-Direction-Docs"
+        },
+        "editlink": {
+            "base": "https://github.com/explooosion/Agm-Direction-Docs/master",
+            "label": "EDIT"
+        },
+        "sitemap": {
+            "hostname": "https://github.com/explooosion/Agm-Direction-Docs"
+        },
+        "sharing": {
+            "facebook": true,
+            "google": true,
+            "twitter": false,
+            "instapaper": false,
+            "weibo": false,
+            "vk": false,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "instapaper"
+            ]
+        }
+    }
+}
