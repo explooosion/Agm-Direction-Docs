@@ -97,14 +97,14 @@ public waypoints: object = [
     {
         location: { lat: myLat, lng: myLng },
         stopover: true,
-    }
+    },
     {
         location: 'Joplin, MO',
         stopover: false,
     },{
         location: 'Oklahoma City, OK',
         stopover: true,
-    }],
+    }]
 ```
 
 ##### [optimizeWaypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
