@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Output · Agm-Direction-Docs</title>
+        <title>Marker · Agm-Direction-Docs</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../featured/" />
+    <link rel="next" href="waypoint.html" />
     
     
-    <link rel="prev" href="input.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -108,9 +108,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../properties/">
             
-                <a href="./">
+                <a href="../properties/">
             
                     
                     Properties
@@ -122,9 +122,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="input.html">
+        <li class="chapter " data-level="1.2.1" data-path="../properties/input.html">
             
-                <a href="input.html">
+                <a href="../properties/input.html">
             
                     
                     Input
@@ -135,9 +135,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="output.html">
+        <li class="chapter " data-level="1.2.2" data-path="../properties/output.html">
             
-                <a href="output.html">
+                <a href="../properties/output.html">
             
                     
                     Output
@@ -153,9 +153,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../featured/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../featured/">
+                <a href="./">
             
                     
                     Featured
@@ -167,9 +167,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../featured/marker.html">
+        <li class="chapter active" data-level="1.3.1" data-path="marker.html">
             
-                <a href="../featured/marker.html">
+                <a href="marker.html">
             
                     
                     Marker
@@ -180,9 +180,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../featured/waypoint.html">
+        <li class="chapter " data-level="1.3.2" data-path="waypoint.html">
             
-                <a href="../featured/waypoint.html">
+                <a href="waypoint.html">
             
                     
                     Waypoint
@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../featured/direction.html">
+        <li class="chapter " data-level="1.3.4" data-path="direction.html">
             
-                <a href="../featured/direction.html">
+                <a href="direction.html">
             
                     
                     Direction
@@ -254,7 +254,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Output</a>
+        <a href="../.." >Marker</a>
     </h1>
 </div>
 
@@ -269,21 +269,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="output">Output</h1>
+                                <h1 id="marker">Marker</h1>
 <hr>
 
 <h3 id="usage">Usage</h3>
-<p>The <code>DirectionsResult</code> object will emit when sending a directions request.</p>
-<p>&#x1F449; <a href="https://developers.google.com/maps/documentation/javascript/directions?hl=en#DirectionsResults" target="_blank">DirectionsResult</a></p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> onChange<span class="token punctuation">:</span> EventEmitter<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<p>Useful features.</p>
 <h3 id="example">Example</h3>
-<h5 id="onchange">onChange</h5>
-<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">(onChange)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>changeHandler($event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
+<h5 id="custom-icons">Custom Icons</h5>
+<p><img src="https://i.imgur.com/FaLnz7A.png" alt="Image"></p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[renderOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>renderOptions<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[markerOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>markerOptions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">changeHandler</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment" spellcheck="true">// You can do anything.</span>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> renderOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    suppressMarkers<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> markerOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    origin<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        icon<span class="token punctuation">:</span> <span class="token string">&apos;https://www.shareicon.net/data/32x32/2016/04/28/756617_face_512x512.png&apos;</span><span class="token punctuation">,</span>
+        draggable<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    destination<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        icon<span class="token punctuation">:</span> <span class="token string">&apos;https://www.shareicon.net/data/32x32/2016/04/28/756626_face_512x512.png&apos;</span><span class="token punctuation">,</span>
+        label<span class="token punctuation">:</span> <span class="token string">&apos;MARKER LABEL&apos;</span><span class="token punctuation">,</span>
+        opacity<span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 </code></pre>
 
@@ -313,12 +322,12 @@
 
             
                 
-                <a href="input.html" class="navigation navigation-prev " aria-label="Previous page: Input">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Featured">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../featured/" class="navigation navigation-next " aria-label="Next page: Featured">
+                <a href="waypoint.html" class="navigation navigation-next " aria-label="Next page: Waypoint">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -329,7 +338,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Output","level":"1.2.2","depth":2,"next":{"title":"Featured","level":"1.3","depth":1,"path":"source/featured/index.md","ref":"source/featured/index.md","articles":[{"title":"Marker","level":"1.3.1","depth":2,"path":"source/featured/marker.md","ref":"source/featured/marker.md","articles":[]},{"title":"Waypoint","level":"1.3.2","depth":2,"path":"source/featured/waypoint.md","ref":"source/featured/waypoint.md","articles":[]},{"title":"InfoWindow 🚧","level":"1.3.3","depth":2,"ref":"","articles":[]},{"title":"Direction","level":"1.3.4","depth":2,"path":"source/featured/direction.md","ref":"source/featured/direction.md","articles":[]}]},"previous":{"title":"Input","level":"1.2.1","depth":2,"path":"source/properties/input.md","ref":"source/properties/input.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/properties/output.md","mtime":"2018-05-30T07:03:49.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T10:28:31.112Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Marker","level":"1.3.1","depth":2,"next":{"title":"Waypoint","level":"1.3.2","depth":2,"path":"source/featured/waypoint.md","ref":"source/featured/waypoint.md","articles":[]},"previous":{"title":"Featured","level":"1.3","depth":1,"path":"source/featured/index.md","ref":"source/featured/index.md","articles":[{"title":"Marker","level":"1.3.1","depth":2,"path":"source/featured/marker.md","ref":"source/featured/marker.md","articles":[]},{"title":"Waypoint","level":"1.3.2","depth":2,"path":"source/featured/waypoint.md","ref":"source/featured/waypoint.md","articles":[]},{"title":"InfoWindow 🚧","level":"1.3.3","depth":2,"ref":"","articles":[]},{"title":"Direction","level":"1.3.4","depth":2,"path":"source/featured/direction.md","ref":"source/featured/direction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/featured/marker.md","mtime":"2018-05-30T07:23:09.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T10:28:31.112Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

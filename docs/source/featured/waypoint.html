@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Events 🚧 · Agm-Direction-Docs</title>
+        <title>Waypoint · Agm-Direction-Docs</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../featured/" />
     
-    
-    <link rel="prev" href="output.html" />
+    <link rel="prev" href="marker.html" />
     
 
     </head>
@@ -108,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../properties/">
             
-                <a href="./">
+                <a href="../properties/">
             
                     
                     Properties
@@ -122,12 +120,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="input.html">
+        <li class="chapter " data-level="1.2.1" data-path="../properties/input.html">
             
-                <a href="input.html">
+                <a href="../properties/input.html">
             
                     
-                    Input 🚧
+                    Input
             
                 </a>
             
@@ -135,25 +133,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="output.html">
+        <li class="chapter " data-level="1.2.2" data-path="../properties/output.html">
             
-                <a href="output.html">
-            
-                    
-                    Output 🚧
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.3" data-path="event.html">
-            
-                <a href="event.html">
+                <a href="../properties/output.html">
             
                     
-                    Events 🚧
+                    Output
             
                 </a>
             
@@ -166,9 +151,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../featured/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../featured/">
+                <a href="./">
             
                     
                     Featured
@@ -180,27 +165,27 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" >
+        <li class="chapter " data-level="1.3.1" data-path="marker.html">
             
-                <span>
+                <a href="marker.html">
             
                     
-                    Marker 🚧
+                    Marker
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" >
+        <li class="chapter active" data-level="1.3.2" data-path="waypoint.html">
             
-                <span>
+                <a href="waypoint.html">
             
                     
-                    Waypoint 🚧
+                    Waypoint
             
-                </span>
+                </a>
             
 
             
@@ -219,14 +204,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" >
+        <li class="chapter " data-level="1.3.4" data-path="direction.html">
             
-                <span>
+                <a href="direction.html">
             
                     
-                    Direction 🚧
+                    Direction
             
-                </span>
+                </a>
             
 
             
@@ -267,7 +252,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Events 🚧</a>
+        <a href="../.." >Waypoint</a>
     </h1>
 </div>
 
@@ -282,11 +267,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="event">Event</h1>
+                                <h1 id="waypoint">Waypoint</h1>
 <hr>
 
 <h3 id="usage">Usage</h3>
-<p>The following items are events.</p>
+<p>Useful features.</p>
+<h3 id="example">Example</h3>
+<h5 id="saving-draggable-directionss-waypoint">Saving Draggable Directions&apos;s Waypoint</h5>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> 
+    <span class="token attr-name">[waypoints]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>waypoints<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[renderOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>renderOptions<span class="token punctuation">&quot;</span></span> 
+    <span class="token attr-name">(onChange)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>change($event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> waypoints<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> renderOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    draggable<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token function">change</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>waypoints <span class="token operator">=</span> event<span class="token punctuation">.</span>request<span class="token punctuation">.</span>waypoints<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                                 
                                 </section>
@@ -314,14 +314,10 @@
 
             
                 
-                <a href="output.html" class="navigation navigation-prev " aria-label="Previous page: Output 🚧">
+                <a href="marker.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Marker">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../featured/" class="navigation navigation-next " aria-label="Next page: Featured">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -330,7 +326,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Events 🚧","level":"1.2.3","depth":2,"next":{"title":"Featured","level":"1.3","depth":1,"path":"source/featured/index.md","ref":"source/featured/index.md","articles":[{"title":"Marker 🚧","level":"1.3.1","depth":2,"ref":"","articles":[]},{"title":"Waypoint 🚧","level":"1.3.2","depth":2,"ref":"","articles":[]},{"title":"InfoWindow 🚧","level":"1.3.3","depth":2,"ref":"","articles":[]},{"title":"Direction 🚧","level":"1.3.4","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Output 🚧","level":"1.2.2","depth":2,"path":"source/properties/output.md","ref":"source/properties/output.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/properties/event.md","mtime":"2018-05-28T19:09:00.519Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T19:30:46.887Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Waypoint","level":"1.3.2","depth":2,"next":{"title":"InfoWindow 🚧","level":"1.3.3","depth":2,"ref":"","articles":[]},"previous":{"title":"Marker","level":"1.3.1","depth":2,"path":"source/featured/marker.md","ref":"source/featured/marker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/featured/waypoint.md","mtime":"2018-05-30T10:11:00.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T10:28:31.112Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
