@@ -1,4 +1,4 @@
-# Agm-Direction-Docs
+# [Agm-Direction-Docs](https://github.com/explooosion/Agm-Direction-Docs)
 
 [![forthebadge](https://forthebadge.com/images/badges/for-sharks.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/GitbookIO/gitbook-cli)
@@ -67,7 +67,9 @@ HTML
 <button type="button" (click)="getDirection()">Get</button>
 
 <agm-map [latitude]="lat" [longitude]="lng">
-  <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
+  <agm-direction *ngIf="dir" 
+    [origin]="dir.origin" [destination]="dir.destination">
+  </agm-direction>
 </agm-map>
 ```
 
@@ -82,11 +84,11 @@ agm-map {
 TS
 
 ```typescript
-lat: Number = 24.799448;
-lng: Number = 120.979021;
-zoom: Number = 14;
+public lat: Number = 24.799448;
+public lng: Number = 120.979021;
+public zoom: Number = 14;
 
-dir = undefined;
+public dir = undefined;
 
 getDirection() {
   this.dir = {
