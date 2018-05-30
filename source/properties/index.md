@@ -8,4 +8,3 @@ The following items are properties.
 
 - [Input](/source/properties/input.md)
 - [Output](/source/properties/output.md)
-- [Event](/source/properties/event.md)
