@@ -35,6 +35,10 @@ public markerOptions: { origin: any, destination: any }
 
 ```typescript
 public origin: any = { lat: 24.799448, lng: 120.979021 }
+
+// or
+
+public origin: string = 'Taipei Main Station'
 ```
 
 ##### destination
@@ -45,6 +49,10 @@ public origin: any = { lat: 24.799448, lng: 120.979021 }
 
 ```typescript
 public destination: any = { lat: 24.799524, lng: 120.975017 }
+
+// or
+
+public destination: string = 'Taiwan Presidential Office'
 ```
 
 ##### [travelMode](https://developers.google.com/maps/documentation/javascript/reference#TravelMode)
