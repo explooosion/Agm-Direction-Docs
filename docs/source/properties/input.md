@@ -9,8 +9,8 @@ The `DirectionsRequest` object literal contains the following fields:
 👉 [DirectionsRequest](https://developers.google.com/maps/documentation/javascript/directions?hl=en#DirectionsRequests)
 
 ```typescript
-public origin: { lat: Number, lng: Number }
-public destination: { lat: Number, lng: Number }
+public origin: LatLng | String | google.maps.Place
+public destination: LatLng | String | google.maps.Place
 public travelMode: string = 'DRIVING'
 public transitOptions: any = undefined
 public drivingOptions: any = undefined
