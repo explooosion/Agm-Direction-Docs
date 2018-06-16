@@ -13,7 +13,7 @@ Useful features.
 ![img](https://camo.githubusercontent.com/773ab0686eb4b3ec0acef716eb58985727bd4c34/68747470733a2f2f692e696d6775722e636f6d2f686c39395956582e676966)
 
 ```html
-<agm-direction [visible]="show"></agm-direction>
+<agm-direction ... [visible]="show"></agm-direction>
 <button type="button" (click)="removeDirection()">Remove</button>
 <button type="button" (click)="showDirection()">Show</button>
 ```
@@ -28,7 +28,7 @@ public showDirection(){
 }
 ```
 
-##### Update Panel With New Query
+##### ⭐️ Update Panel With New Query
 
 ![Image](https://camo.githubusercontent.com/80f24aa149b5f06f28bf5f85d739b2e559510928/68747470733a2f2f692e696d6775722e636f6d2f6932484a4c46422e676966)
 

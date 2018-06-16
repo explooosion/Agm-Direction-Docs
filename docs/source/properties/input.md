@@ -9,8 +9,8 @@ The `DirectionsRequest` object literal contains the following fields:
 👉 [DirectionsRequest](https://developers.google.com/maps/documentation/javascript/directions?hl=en#DirectionsRequests)
 
 ```typescript
-public origin: LatLng | String | google.maps.Place
-public destination: LatLng | String | google.maps.Place
+public origin: LatLng | string | google.maps.Place
+public destination: LatLng | string | google.maps.Place
 public travelMode: string = 'DRIVING'
 public transitOptions: any = undefined
 public drivingOptions: any = undefined
@@ -22,12 +22,21 @@ public avoidTolls: boolean = false
 public renderOptions: any
 public visible: boolean = true
 public panel: object | undefined
-public markerOptions: { origin: any, destination: any }
+public markerOptions: { 
+    origin: { 
+        infoWindow: string,
+        ...
+    }, 
+    destination: { 
+        infoWindow: string,
+        ... 
+    } 
+}
 ```
 
 ### Example
 
-##### origin
+##### ⭐️ origin
 
 ```html
 <agm-direction [origin]="origin"></agm-direction>
@@ -41,7 +50,7 @@ public origin: any = { lat: 24.799448, lng: 120.979021 }
 public origin: string = 'Taipei Main Station'
 ```
 
-##### destination
+##### ⭐️ destination
 
 ```html
 <agm-direction [destination]="destination"></agm-direction>
@@ -55,7 +64,7 @@ public destination: any = { lat: 24.799524, lng: 120.975017 }
 public destination: string = 'Taiwan Presidential Office'
 ```
 
-##### [travelMode](https://developers.google.com/maps/documentation/javascript/reference#TravelMode)
+##### ⭐️ [travelMode](https://developers.google.com/maps/documentation/javascript/reference#TravelMode)
 
 ```html
 <agm-direction [travelMode]="travelMode"></agm-direction>
@@ -65,7 +74,7 @@ public destination: string = 'Taiwan Presidential Office'
 public transitOptions: string = 'TRANSIT' // default: 'DRIVING'
 ```
 
-##### [transitOptions](https://developers.google.com/maps/documentation/javascript/reference#TransitOptions)
+##### ⭐️ [transitOptions](https://developers.google.com/maps/documentation/javascript/reference#TransitOptions)
 
 ```html
 <agm-direction [travelMode]="travelMode" [transitOptions]="transitOptions"></agm-direction>
@@ -80,7 +89,7 @@ public transitOptions: any = {
 }
 ```
 
-##### [drivingOptions](https://developers.google.com/maps/documentation/javascript/reference#DrivingOptions)
+##### ⭐️ [drivingOptions](https://developers.google.com/maps/documentation/javascript/reference#DrivingOptions)
 
 ```html
 <agm-direction [drivingOptions]="drivingOptions"></agm-direction>
@@ -94,7 +103,7 @@ public drivingOptions: any = {
 }
 ```
 
-##### [waypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsWaypoint)
+##### ⭐️ [waypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsWaypoint)
 
 ```html
 <agm-direction [waypoints]="waypoints"></agm-direction>
@@ -115,7 +124,7 @@ public waypoints: object = [
     }]
 ```
 
-##### [optimizeWaypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+##### ⭐️ [optimizeWaypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
 <agm-direction [waypoints]="waypoints" [optimizeWaypoints]="optimizeWaypoints"></agm-direction>
@@ -126,7 +135,7 @@ public waypoints: object = [...]
 public optimizeWaypoints: boolean = false // default: true
 ```
 
-##### [provideRouteAlternatives](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+##### ⭐️ [provideRouteAlternatives](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
 <agm-direction [waypoints]="waypoints" [provideRouteAlternatives]="provideRouteAlternatives"></agm-direction>
@@ -137,7 +146,7 @@ public waypoints: object = [...]
 public provideRouteAlternatives: boolean = true // default: false
 ```
 
-##### [avoidHighways](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+##### ⭐️ [avoidHighways](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
 <agm-direction [avoidHighways]="avoidHighways"></agm-direction>
@@ -147,7 +156,7 @@ public provideRouteAlternatives: boolean = true // default: false
 public avoidHighways: boolean = true // default: false
 ```
 
-##### [avoidTolls](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
+##### ⭐️ [avoidTolls](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
 <agm-direction [avoidTolls]="avoidTolls"></agm-direction>
@@ -157,7 +166,7 @@ public avoidHighways: boolean = true // default: false
 public avoidTolls: boolean = true // default: false
 ```
 
-##### [renderOptions](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions)
+##### ⭐️ [renderOptions](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions)
 
 ```html
 <agm-direction [renderOptions]="renderOptions"></agm-direction>
@@ -174,7 +183,7 @@ public renderOptions: any = {
 }
 ```
 
-##### visible
+##### ⭐️ visible
 
 ```html
 <agm-direction [visible]="visible"></agm-direction>
@@ -184,7 +193,7 @@ public renderOptions: any = {
 public visible: boolean = false // default: true
 ```
 
-##### [panel](https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en)
+##### ⭐️ [panel](https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en)
 
 ```html
 <agm-direction [panel]="myPanel"></agm-direction>
@@ -204,7 +213,7 @@ public setPanel() {
 }
 ```
 
-##### [markerOptions](https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions)
+##### ⭐️ [markerOptions](https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions)
 
 ```html
 <agm-direction [renderOptions]="renderOptions" [markerOptions]="markerOptions"></agm-direction>
@@ -217,6 +226,7 @@ public renderOptions = {
 
 public markerOptions = {
     origin: {
+        infoWindow: 'This is origin.'
         icon: 'your-icon-url',
         draggable: true,
     },

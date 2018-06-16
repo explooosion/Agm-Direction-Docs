@@ -8,10 +8,10 @@ Useful features.
 
 ### Example
 
-##### Saving Draggable Directions's Waypoint
+##### ⭐️ Saving Draggable Directions's Waypoint
 
 ```html
-<agm-direction 
+<agm-direction ...
     [waypoints]="waypoints" [renderOptions]="renderOptions" 
     (onChange)="change($event)">
 </agm-direction>

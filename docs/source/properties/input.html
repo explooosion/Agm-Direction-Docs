@@ -193,20 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" >
-            
-                <span>
-            
-                    
-                    InfoWindow 🚧
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="../featured/direction.html">
+        <li class="chapter " data-level="1.3.3" data-path="../featured/direction.html">
             
                 <a href="../featured/direction.html">
             
@@ -275,8 +262,8 @@
 <h3 id="usage">Usage</h3>
 <p>The <code>DirectionsRequest</code> object literal contains the following fields:</p>
 <p>&#x1F449; <a href="https://developers.google.com/maps/documentation/javascript/directions?hl=en#DirectionsRequests" target="_blank">DirectionsRequest</a></p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> origin<span class="token punctuation">:</span> LatLng <span class="token operator">|</span> String <span class="token operator">|</span> google<span class="token punctuation">.</span>maps<span class="token punctuation">.</span>Place
-<span class="token keyword">public</span> destination<span class="token punctuation">:</span> LatLng <span class="token operator">|</span> String <span class="token operator">|</span> google<span class="token punctuation">.</span>maps<span class="token punctuation">.</span>Place
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> origin<span class="token punctuation">:</span> LatLng <span class="token operator">|</span> <span class="token keyword">string</span> <span class="token operator">|</span> google<span class="token punctuation">.</span>maps<span class="token punctuation">.</span>Place
+<span class="token keyword">public</span> destination<span class="token punctuation">:</span> LatLng <span class="token operator">|</span> <span class="token keyword">string</span> <span class="token operator">|</span> google<span class="token punctuation">.</span>maps<span class="token punctuation">.</span>Place
 <span class="token keyword">public</span> travelMode<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token operator">=</span> <span class="token string">&apos;DRIVING&apos;</span>
 <span class="token keyword">public</span> transitOptions<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> undefined
 <span class="token keyword">public</span> drivingOptions<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> undefined
@@ -288,10 +275,19 @@
 <span class="token keyword">public</span> renderOptions<span class="token punctuation">:</span> <span class="token keyword">any</span>
 <span class="token keyword">public</span> visible<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">true</span>
 <span class="token keyword">public</span> panel<span class="token punctuation">:</span> object <span class="token operator">|</span> undefined
-<span class="token keyword">public</span> markerOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span> origin<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">,</span> destination<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token punctuation">}</span>
+<span class="token keyword">public</span> markerOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+    origin<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+        infoWindow<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    destination<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+        infoWindow<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="example">Example</h3>
-<h5 id="origin">origin</h5>
+<h5 id="&#x2B50;&#xFE0F;-origin">&#x2B50;&#xFE0F; origin</h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[origin]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>origin<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> origin<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span> lat<span class="token punctuation">:</span> <span class="token number">24.799448</span><span class="token punctuation">,</span> lng<span class="token punctuation">:</span> <span class="token number">120.979021</span> <span class="token punctuation">}</span>
@@ -300,7 +296,7 @@
 
 <span class="token keyword">public</span> origin<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token operator">=</span> <span class="token string">&apos;Taipei Main Station&apos;</span>
 </code></pre>
-<h5 id="destination">destination</h5>
+<h5 id="&#x2B50;&#xFE0F;-destination">&#x2B50;&#xFE0F; destination</h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[destination]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>destination<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> destination<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span> lat<span class="token punctuation">:</span> <span class="token number">24.799524</span><span class="token punctuation">,</span> lng<span class="token punctuation">:</span> <span class="token number">120.975017</span> <span class="token punctuation">}</span>
@@ -309,12 +305,12 @@
 
 <span class="token keyword">public</span> destination<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token operator">=</span> <span class="token string">&apos;Taiwan Presidential Office&apos;</span>
 </code></pre>
-<h5 id="travelmode"><a href="https://developers.google.com/maps/documentation/javascript/reference#TravelMode" target="_blank">travelMode</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-travelmode">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#TravelMode" target="_blank">travelMode</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[travelMode]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>travelMode<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> transitOptions<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token operator">=</span> <span class="token string">&apos;TRANSIT&apos;</span> <span class="token comment" spellcheck="true">// default: &apos;DRIVING&apos;</span>
 </code></pre>
-<h5 id="transitoptions"><a href="https://developers.google.com/maps/documentation/javascript/reference#TransitOptions" target="_blank">transitOptions</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-transitoptions">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#TransitOptions" target="_blank">transitOptions</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[travelMode]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>travelMode<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[transitOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>transitOptions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> transitOptions<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token operator">=</span> <span class="token string">&apos;TRANSIT&apos;</span>
@@ -324,7 +320,7 @@
     modes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;BUS&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="drivingoptions"><a href="https://developers.google.com/maps/documentation/javascript/reference#DrivingOptions" target="_blank">drivingOptions</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-drivingoptions">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DrivingOptions" target="_blank">drivingOptions</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[drivingOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>drivingOptions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> drivingOptions<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -333,7 +329,7 @@
     modes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;BUS&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="waypoints"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsWaypoint" target="_blank">waypoints</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-waypoints">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsWaypoint" target="_blank">waypoints</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[waypoints]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>waypoints<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> waypoints<span class="token punctuation">:</span> object <span class="token operator">=</span> <span class="token punctuation">[</span>
@@ -349,29 +345,29 @@
         stopover<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">]</span>
 </code></pre>
-<h5 id="optimizewaypoints"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">optimizeWaypoints</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-optimizewaypoints">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">optimizeWaypoints</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[waypoints]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>waypoints<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[optimizeWaypoints]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>optimizeWaypoints<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> waypoints<span class="token punctuation">:</span> object <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span>
 <span class="token keyword">public</span> optimizeWaypoints<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">false</span> <span class="token comment" spellcheck="true">// default: true</span>
 </code></pre>
-<h5 id="provideroutealternatives"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">provideRouteAlternatives</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-provideroutealternatives">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">provideRouteAlternatives</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[waypoints]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>waypoints<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[provideRouteAlternatives]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>provideRouteAlternatives<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> waypoints<span class="token punctuation">:</span> object <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span>
 <span class="token keyword">public</span> provideRouteAlternatives<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token comment" spellcheck="true">// default: false</span>
 </code></pre>
-<h5 id="avoidhighways"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">avoidHighways</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-avoidhighways">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">avoidHighways</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[avoidHighways]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>avoidHighways<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> avoidHighways<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token comment" spellcheck="true">// default: false</span>
 </code></pre>
-<h5 id="avoidtolls"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">avoidTolls</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-avoidtolls">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest" target="_blank">avoidTolls</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[avoidTolls]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>avoidTolls<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> avoidTolls<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token comment" spellcheck="true">// default: false</span>
 </code></pre>
-<h5 id="renderoptions"><a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions" target="_blank">renderOptions</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-renderoptions">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions" target="_blank">renderOptions</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[renderOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>renderOptions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> renderOptions<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -383,12 +379,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="visible">visible</h5>
+<h5 id="&#x2B50;&#xFE0F;-visible">&#x2B50;&#xFE0F; visible</h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[visible]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>visible<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> visible<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">false</span> <span class="token comment" spellcheck="true">// default: true</span>
 </code></pre>
-<h5 id="panel"><a href="https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en" target="_blank">panel</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-panel">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en" target="_blank">panel</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[panel]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>myPanel<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">#myPanel</span><span class="token punctuation">&gt;</span></span>&lt;/div
 </code></pre>
@@ -400,7 +396,7 @@
     <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&apos;#myPanel&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="markeroptions"><a href="https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions" target="_blank">markerOptions</a></h5>
+<h5 id="&#x2B50;&#xFE0F;-markeroptions">&#x2B50;&#xFE0F; <a href="https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions" target="_blank">markerOptions</a></h5>
 <pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">[renderOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>renderOptions<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[markerOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>markerOptions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">public</span> renderOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -409,6 +405,7 @@
 
 <span class="token keyword">public</span> markerOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
     origin<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        infoWindow<span class="token punctuation">:</span> <span class="token string">&apos;This is origin.&apos;</span>
         icon<span class="token punctuation">:</span> <span class="token string">&apos;your-icon-url&apos;</span><span class="token punctuation">,</span>
         draggable<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -462,7 +459,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input","level":"1.2.1","depth":2,"next":{"title":"Output","level":"1.2.2","depth":2,"path":"source/properties/output.md","ref":"source/properties/output.md","articles":[]},"previous":{"title":"Properties","level":"1.2","depth":1,"path":"source/properties/index.md","ref":"source/properties/index.md","articles":[{"title":"Input","level":"1.2.1","depth":2,"path":"source/properties/input.md","ref":"source/properties/input.md","articles":[]},{"title":"Output","level":"1.2.2","depth":2,"path":"source/properties/output.md","ref":"source/properties/output.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/properties/input.md","mtime":"2018-06-13T14:28:36.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T14:28:58.376Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Input","level":"1.2.1","depth":2,"next":{"title":"Output","level":"1.2.2","depth":2,"path":"source/properties/output.md","ref":"source/properties/output.md","articles":[]},"previous":{"title":"Properties","level":"1.2","depth":1,"path":"source/properties/index.md","ref":"source/properties/index.md","articles":[{"title":"Input","level":"1.2.1","depth":2,"path":"source/properties/input.md","ref":"source/properties/input.md","articles":[]},{"title":"Output","level":"1.2.2","depth":2,"path":"source/properties/output.md","ref":"source/properties/output.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","prism","-highlight","splitter","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/explooosion/Agm-Direction-Docs"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://github.com/explooosion/Agm-Direction-Docs"},"sharing":{"facebook":true,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Agm-Direction-Docs","language":"en","gitbook":"*","description":"Document for Agm-Direction"},"file":{"path":"source/properties/input.md","mtime":"2018-06-16T12:06:21.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-16T12:07:53.577Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

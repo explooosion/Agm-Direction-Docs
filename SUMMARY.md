@@ -4,5 +4,4 @@
 * [Featured](source/featured/index.md)
     * [Marker](source/featured/marker.md)
     * [Waypoint](source/featured/waypoint.md)
-    * [InfoWindow 🚧]()
     * [Direction](source/featured/direction.md)

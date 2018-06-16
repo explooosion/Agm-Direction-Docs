@@ -14,7 +14,7 @@ public onChange: EventEmitter<any> = new EventEmitter<any>()
 
 ### Example
 
-##### onChange
+##### ⭐️ onChange
 
 ```html
 <agm-direction (onChange)="changeHandler($event)"></agm-direction>
