@@ -36,6 +36,8 @@ public markerOptions = {
 
 ##### ⭐️ Custom infoWindow
 
+Need to create custom marker to bind infoWindow.
+
 - infoWindow: string | (default: *addr* )
 
 ![Image](https://i.imgur.com/FLCk1Ix.png)
