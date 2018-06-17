@@ -12,8 +12,10 @@ Useful features.
 
 ```html
 <agm-direction ...
-    [waypoints]="waypoints" [renderOptions]="renderOptions" 
-    (onChange)="change($event)">
+    [waypoints]="waypoints" 
+    [renderOptions]="renderOptions" 
+    (onChange)="change($event)"
+>
 </agm-direction>
 ```
 

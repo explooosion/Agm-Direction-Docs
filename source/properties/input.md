@@ -39,7 +39,7 @@ public markerOptions: {
 ##### ⭐️ origin
 
 ```html
-<agm-direction [origin]="origin"></agm-direction>
+<agm-direction ... [origin]="origin"></agm-direction>
 ```
 
 ```typescript
@@ -53,7 +53,7 @@ public origin: string = 'Taipei Main Station'
 ##### ⭐️ destination
 
 ```html
-<agm-direction [destination]="destination"></agm-direction>
+<agm-direction ... [destination]="destination"></agm-direction>
 ```
 
 ```typescript
@@ -67,7 +67,7 @@ public destination: string = 'Taiwan Presidential Office'
 ##### ⭐️ [travelMode](https://developers.google.com/maps/documentation/javascript/reference#TravelMode)
 
 ```html
-<agm-direction [travelMode]="travelMode"></agm-direction>
+<agm-direction ... [travelMode]="travelMode"></agm-direction>
 ```
 
 ```typescript
@@ -77,7 +77,7 @@ public transitOptions: string = 'TRANSIT' // default: 'DRIVING'
 ##### ⭐️ [transitOptions](https://developers.google.com/maps/documentation/javascript/reference#TransitOptions)
 
 ```html
-<agm-direction [travelMode]="travelMode" [transitOptions]="transitOptions"></agm-direction>
+<agm-direction ... [travelMode]="travelMode" [transitOptions]="transitOptions"></agm-direction>
 ```
 
 ```typescript
@@ -92,7 +92,7 @@ public transitOptions: any = {
 ##### ⭐️ [drivingOptions](https://developers.google.com/maps/documentation/javascript/reference#DrivingOptions)
 
 ```html
-<agm-direction [drivingOptions]="drivingOptions"></agm-direction>
+<agm-direction ... [drivingOptions]="drivingOptions"></agm-direction>
 ```
 
 ```typescript
@@ -106,7 +106,7 @@ public drivingOptions: any = {
 ##### ⭐️ [waypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsWaypoint)
 
 ```html
-<agm-direction [waypoints]="waypoints"></agm-direction>
+<agm-direction ... [waypoints]="waypoints"></agm-direction>
 ```
 
 ```typescript
@@ -127,7 +127,7 @@ public waypoints: object = [
 ##### ⭐️ [optimizeWaypoints](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
-<agm-direction [waypoints]="waypoints" [optimizeWaypoints]="optimizeWaypoints"></agm-direction>
+<agm-direction ... [waypoints]="waypoints" [optimizeWaypoints]="optimizeWaypoints"></agm-direction>
 ```
 
 ```typescript
@@ -138,7 +138,7 @@ public optimizeWaypoints: boolean = false // default: true
 ##### ⭐️ [provideRouteAlternatives](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
-<agm-direction [waypoints]="waypoints" [provideRouteAlternatives]="provideRouteAlternatives"></agm-direction>
+<agm-direction ... [waypoints]="waypoints" [provideRouteAlternatives]="provideRouteAlternatives"></agm-direction>
 ```
 
 ```typescript
@@ -149,7 +149,7 @@ public provideRouteAlternatives: boolean = true // default: false
 ##### ⭐️ [avoidHighways](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
-<agm-direction [avoidHighways]="avoidHighways"></agm-direction>
+<agm-direction ... [avoidHighways]="avoidHighways"></agm-direction>
 ```
 
 ```typescript
@@ -159,7 +159,7 @@ public avoidHighways: boolean = true // default: false
 ##### ⭐️ [avoidTolls](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRequest)
 
 ```html
-<agm-direction [avoidTolls]="avoidTolls"></agm-direction>
+<agm-direction ... [avoidTolls]="avoidTolls"></agm-direction>
 ```
 
 ```typescript
@@ -169,7 +169,7 @@ public avoidTolls: boolean = true // default: false
 ##### ⭐️ [renderOptions](https://developers.google.com/maps/documentation/javascript/reference#DirectionsRendererOptions)
 
 ```html
-<agm-direction [renderOptions]="renderOptions"></agm-direction>
+<agm-direction ... [renderOptions]="renderOptions"></agm-direction>
 ```
 
 ```typescript
@@ -186,7 +186,7 @@ public renderOptions: any = {
 ##### ⭐️ visible
 
 ```html
-<agm-direction [visible]="visible"></agm-direction>
+<agm-direction ... [visible]="visible"></agm-direction>
 ```
 
 ```typescript
@@ -196,14 +196,14 @@ public visible: boolean = false // default: true
 ##### ⭐️ [panel](https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en)
 
 ```html
-<agm-direction [panel]="myPanel"></agm-direction>
+<agm-direction ... [panel]="myPanel"></agm-direction>
 <div #myPanel></div
 ```
 
 or
 
 ```html
-<agm-direction [panel]="setPanel()"></agm-direction>
+<agm-direction ... [panel]="setPanel()"></agm-direction>
 <div id="myPanel"></div>
 ```
 
@@ -216,7 +216,7 @@ public setPanel() {
 ##### ⭐️ [markerOptions](https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions)
 
 ```html
-<agm-direction [renderOptions]="renderOptions" [markerOptions]="markerOptions"></agm-direction>
+<agm-direction ... [renderOptions]="renderOptions" [markerOptions]="markerOptions"></agm-direction>
 ```
 
 ```typescript
@@ -236,4 +236,18 @@ public markerOptions = {
         opacity: 0.8,
     },
 }
+```
+
+##### ⭐️ infoWindow
+
+```html
+<agm-direction ... [infoWindow]="infoWindow"></agm-direction>
+```
+
+```typescript
+import { InfoWindow } from '@agm/core/services/google-maps-types' // option
+```
+
+```typescript
+public infoWindow: InfoWindow = undefined
 ```

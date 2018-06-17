@@ -8,7 +8,7 @@ Useful features.
 
 ### Example
 
-##### Remove Direction
+##### ⭐️ Remove Direction
 
 ![img](https://camo.githubusercontent.com/773ab0686eb4b3ec0acef716eb58985727bd4c34/68747470733a2f2f692e696d6775722e636f6d2f686c39395956582e676966)
 
@@ -33,9 +33,12 @@ public showDirection(){
 ![Image](https://camo.githubusercontent.com/80f24aa149b5f06f28bf5f85d739b2e559510928/68747470733a2f2f692e696d6775722e636f6d2f6932484a4c46422e676966)
 
 ```html
-<agm-direction *ngIf="dir" 
-    [origin]="dir.origin" [destination]="dir.destination"
-    [panel]="#myPanel">
+<agm-direction 
+    *ngIf="dir" 
+    [origin]="dir.origin" 
+    [destination]="dir.destination" 
+    [panel]="#myPanel"
+>
 </agm-direction>
 <div #myPanel></div>
 <button type="button" (click)="getDirection_A()">Direction_A</button>

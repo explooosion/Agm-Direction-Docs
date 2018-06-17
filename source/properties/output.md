@@ -17,7 +17,7 @@ public onChange: EventEmitter<any> = new EventEmitter<any>()
 ##### ⭐️ onChange
 
 ```html
-<agm-direction (onChange)="changeHandler($event)"></agm-direction>
+<agm-direction ... (onChange)="changeHandler($event)"></agm-direction>
 ```
 
 ```typescript
@@ -27,3 +27,23 @@ public changeHandler(event: any){
 }
 ```
 
+##### ⭐️ sendInfoWindow
+
+Only one infoWindow to be open at one time in multiple directions.
+
+See [Multiple directions one infoWindow](http://robby570.tw/Agm-Direction-Docs/source/featured/marker.html)
+
+```html
+<agm-direction ... [infoWindow]="infoWindow" (sendInfoWindow)="obtainInfowindow($event)"></agm-direction>
+```
+```typescript
+import { InfoWindow } from '@agm/core/services/google-maps-types' // option
+```
+
+```typescript
+public infoWindow: InfoWindow = undefined
+
+public obtainInfowindow(window: InfoWindow) {
+  this.infoWindow = window
+}
+```
