@@ -32,6 +32,7 @@ public markerOptions: {
         ... 
     } 
 }
+public infoWindow: InfoWindow = undefined
 ```
 
 ### Example
