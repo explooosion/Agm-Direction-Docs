@@ -30,7 +30,13 @@ public markerOptions: {
     destination: { 
         infoWindow: string,
         ... 
-    } 
+    },
+    waypoints: [
+        {
+         infoWindow: string,
+        ...        
+        },
+    ],
 }
 public infoWindow: InfoWindow = undefined
 ```
@@ -216,6 +222,8 @@ public setPanel() {
 
 ##### ⭐️ [markerOptions](https://developers.google.com/maps/documentation/javascript/reference?hl=zh-tw#MarkerOptions)
 
+###### Custom origin and destination markers:
+
 ```html
 <agm-direction ... [renderOptions]="renderOptions" [markerOptions]="markerOptions"></agm-direction>
 ```
@@ -227,11 +235,62 @@ public renderOptions = {
 
 public markerOptions = {
     origin: {
-        infoWindow: 'This is origin.'
+        infoWindow: 'This is origin.',
         icon: 'your-icon-url',
         draggable: true,
     },
     destination: {
+        icon: 'your-icon-url',
+        label: 'marker label',
+        opacity: 0.8,
+    },
+}
+```
+
+###### Custom origin, destination and waypoints markers:
+
+```typescript
+public markerOptions = {
+    origin: {
+        infoWindow: 'This is origin.',
+        icon: 'your-icon-url',
+        draggable: true,
+    },
+    destination: {
+        icon: 'your-icon-url',
+        label: 'marker label',
+        opacity: 0.8,
+    },
+    waypoints: [
+      {
+        icon: 'your-icon-url',
+        label: 'marker label',
+        opacity: 0.8,
+      },
+      {
+        icon: 'your-icon-url',
+        label: 'marker label',
+        opacity: 0.8,
+      },
+    ],
+}
+```
+
+###### Set all waypoints are the same properties:
+
+```typescript
+public markerOptions = {
+    origin: {
+        infoWindow: 'This is origin.',
+        icon: 'your-icon-url',
+        draggable: true,
+    },
+    destination: {
+        icon: 'your-icon-url',
+        label: 'marker label',
+        opacity: 0.8,
+    },
+    waypoints: {
         icon: 'your-icon-url',
         label: 'marker label',
         opacity: 0.8,

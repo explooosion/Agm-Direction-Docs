@@ -67,8 +67,7 @@ HTML
 <button type="button" (click)="getDirection()">Get</button>
 
 <agm-map [latitude]="lat" [longitude]="lng">
-  <agm-direction *ngIf="dir" 
-    [origin]="dir.origin" [destination]="dir.destination">
+  <agm-direction [origin]="origin" [destination]="destination">
   </agm-direction>
 </agm-map>
 ```
@@ -84,18 +83,11 @@ agm-map {
 TS
 
 ```typescript
-public lat: Number = 24.799448;
-public lng: Number = 120.979021;
-public zoom: Number = 14;
+public lat = 24.799448
+public lng = 120.979021
 
-public dir = undefined;
-
-getDirection() {
-  this.dir = {
-    origin: { lat: 24.799448, lng: 120.979021 },
-    destination: { lat: 24.799524, lng: 120.975017 }
-  }
-}
+public origin = { lat: 24.799448, lng: 120.979021 }
+public origin = { lat: 24.799524, lng: 120.975017 }
 ```
 
 ## Boilerplate
