@@ -93,6 +93,25 @@ public origin = { lat: 24.799524, lng: 120.975017 }
 ## Boilerplate
 Fork from [gitbook-boilerplate](https://github.com/explooosion/gitbook-boilerplate).
 
+
+### Run local
+
+```bash
+git clone https://github.com/explooosion/Agm-Direction-Docs.git
+```
+
+```bash
+npm install -g gitbook-cli
+```
+
+```bash
+gitbook update
+```
+
+```bash
+yarn dev
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)

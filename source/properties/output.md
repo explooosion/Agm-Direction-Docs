@@ -9,7 +9,11 @@ The `DirectionsResult` object will emit when sending a directions request.
 👉 [DirectionsResult](https://developers.google.com/maps/documentation/javascript/directions?hl=en#DirectionsResults)
 
 ```typescript
-public onChange: EventEmitter<any> = new EventEmitter<any>()
+@Output() onChange: EventEmitter<any> = new EventEmitter<any>()
+
+@Output() onResponse: EventEmitter<any> = new EventEmitter<any>()
+
+@Output() sendInfoWindow: EventEmitter<InfoWindow> = new EventEmitter<InfoWindow>();
 ```
 
 ### Example
@@ -17,11 +21,24 @@ public onChange: EventEmitter<any> = new EventEmitter<any>()
 ##### ⭐️ onChange
 
 ```html
-<agm-direction ... (onChange)="changeHandler($event)"></agm-direction>
+<agm-direction ... (onChange)="onChange($event)"></agm-direction>
 ```
 
 ```typescript
-public changeHandler(event: any){
+public onChange(event: any){
+  console.log(event);
+  // You can do anything.
+}
+```
+
+##### ⭐️ onResponse
+
+```html
+<agm-direction ... (onResponse)="onResponse($event)"></agm-direction>
+```
+
+```typescript
+public onResponse(event: any){
   console.log(event);
   // You can do anything.
 }
