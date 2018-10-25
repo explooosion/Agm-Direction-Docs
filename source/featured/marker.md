@@ -40,7 +40,7 @@ public markerOptions = {
 
 ##### ⭐️ Custom infoWindow
 
-Need to create custom marker to bind infoWindow.
+You need to create custom marker to use infoWindow.
 
 - infoWindow: string | (default: *addr* )
 
@@ -75,7 +75,7 @@ public markerOptions = {
 
 ##### ⭐️ Multiple directions one infoWindow
  
-When click marker, other direction's infoWindows will be close. 
+When click marker, other infoWindow will be closed.
 
 ![img](https://user-images.githubusercontent.com/13682994/41510320-f14a259e-7294-11e8-925c-719f1a88d2a8.gif)
 

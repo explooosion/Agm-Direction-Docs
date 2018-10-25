@@ -14,6 +14,8 @@ The `DirectionsResult` object will emit when sending a directions request.
 @Output() onResponse: EventEmitter<any> = new EventEmitter<any>()
 
 @Output() sendInfoWindow: EventEmitter<InfoWindow> = new EventEmitter<InfoWindow>();
+
+@Output() status: EventEmitter<string> = new EventEmitter<string>();
 ```
 
 ### Example
@@ -62,5 +64,21 @@ public infoWindow: InfoWindow = undefined
 
 public obtainInfowindow(window: InfoWindow) {
   this.infoWindow = window
+}
+```
+
+##### ⭐️ status
+
+Status of Directions Query.
+
+- [DirectionsStatus](https://developers.google.com/maps/documentation/javascript/directions#DirectionsStatus)
+
+```html
+<agm-direction ... (status)="getStatus($event)"></agm-direction>
+```
+
+```typescript
+public getStatus(status: any){
+  console.log(status);
 }
 ```
