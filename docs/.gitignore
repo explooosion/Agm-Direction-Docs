@@ -1,9 +1,0 @@
-# File
-yarn-error.log
-*.pdf
-
-# ===========================
-
-# Folder
-node_modules
-_book
