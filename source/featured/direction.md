@@ -60,3 +60,57 @@ public getDirection_B() {
     }
 }
 ```
+
+##### ⭐️ Load multiple directions [avoid query limit]
+
+![Image](https://user-images.githubusercontent.com/13682994/64004882-c8948480-cb41-11e9-8a83-70d74e8ec849.png)
+
+```html
+<agm-map>
+    <agm-direction
+        *ngFor="let dir of directions"
+        [visible]="done"
+        [origin]="dir.origin"
+        [destination]="dir.destination"
+    >
+    </agm-direction>
+</agm-map>
+<h1 style="text-align: center">Load: {{!done}}</h1>
+```
+
+```typescript
+
+public directions: any = [];
+public done = false;
+
+ngOnInit() {
+const dynamic = [{
+    origin: { lat: Number(24.7992116), lng: Number(120.974784) },
+    destination: { lat: Number(24.7994235), lng: Number(120.971342) },
+},
+{
+    origin: { lat: Number(24.7984561), lng: Number(120.977411) },
+    destination: { lat: Number(24.7989161), lng: Number(120.976215) },
+},
+{
+    origin: { lat: Number(24.7963123), lng: Number(120.971211) },
+    destination: { lat: Number(24.7969451), lng: Number(120.972611) },
+},
+{
+    origin: { lat: Number(24.7944416), lng: Number(120.974444) },
+    destination: { lat: Number(24.7945116), lng: Number(120.976612) },
+},
+{
+    origin: { lat: Number(24.7942116), lng: Number(120.978184) },
+    destination: { lat: Number(24.7947726), lng: Number(120.9789124) },
+},
+{
+    origin: { lat: Number(24.7912135), lng: Number(120.971184) },
+    destination: { lat: Number(24.7924125), lng: Number(120.969914) },
+}];
+
+this.directions = dynamic;
+setTimeout(() => { this.done = true; }, 1500);
+}
+```
+
