@@ -1,6 +1,6 @@
 {
   "name": "agm-direction-docs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "document for agm-direction",
   "main": "index.js",
   "scripts": {

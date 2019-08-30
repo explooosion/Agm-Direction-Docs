@@ -59,7 +59,7 @@
         data-chapter-title="Output"
         data-filepath="source/properties/output.md"
         data-basepath="../.."
-        data-revision="Thu Oct 25 2018 15:43:32 GMT+0800 (CST)"
+        data-revision="Fri Aug 30 2019 16:22:16 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -256,7 +256,7 @@
 <h5 id="&#x2B50;&#xFE0F;-onchange">&#x2B50;&#xFE0F; onChange</h5>
 <pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">...</span> <span class="token attr-name">(onChange)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onChange($event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">onChange</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token comment">// You can do anything.</span>
 <span class="token punctuation">}</span>
@@ -265,7 +265,7 @@
 <h5 id="&#x2B50;&#xFE0F;-onresponse">&#x2B50;&#xFE0F; onResponse</h5>
 <pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">...</span> <span class="token attr-name">(onResponse)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onResponse($event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">onResponse</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">onResponse</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token comment">// You can do anything.</span>
 <span class="token punctuation">}</span>
@@ -279,7 +279,7 @@
 </code></pre>
 <pre><code class="lang-typescript"><span class="token keyword">public</span> infoWindow<span class="token punctuation">:</span> InfoWindow <span class="token operator">=</span> undefined
 
-<span class="token keyword">public</span> <span class="token function">obtainInfowindow</span><span class="token punctuation">(</span>window<span class="token punctuation">:</span> InfoWindow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token function">obtainInfowindow</span><span class="token punctuation">(</span><span class="token parameter">window<span class="token punctuation">:</span> InfoWindow</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span>infoWindow <span class="token operator">=</span> window
 <span class="token punctuation">}</span>
 </code></pre>
@@ -290,7 +290,7 @@
 </ul>
 <pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>agm-direction</span> <span class="token attr-name">...</span> <span class="token attr-name">(status)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>getStatus($event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>agm-direction</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">getStatus</span><span class="token punctuation">(</span>status<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre><code class="lang-typescript"><span class="token keyword">public</span> <span class="token function">getStatus</span><span class="token punctuation">(</span><span class="token parameter">status<span class="token punctuation">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
